@@ -18,3 +18,8 @@ xf = 3;
 % Solución analítica
 [xa,ya] = ode45(f,[x0 xf],y0)
 
+% Obtained Vectors Graph
+% Gráfica de vectores obtenidos
+clf
+plot(xa,ya,'LineWidth', 2, 'Color', 'r')
+grid on
