@@ -7,3 +7,10 @@ clc
 clear
 format shortG
 
+% Capturing initial data
+% Captura de datos iniciales
+f = @(x,y) 37.5 - (3.5*y);
+x0 = 0;
+y0 = 50;
+xf = 3;
+
