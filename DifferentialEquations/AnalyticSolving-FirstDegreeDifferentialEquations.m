@@ -14,3 +14,7 @@ x0 = 0;
 y0 = 50;
 xf = 3;
 
+% Analytic Solve
+% Solución analítica
+[xa,ya] = ode45(f,[x0 xf],y0)
+
