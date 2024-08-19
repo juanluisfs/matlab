@@ -1,31 +1,36 @@
-%Juan Luis Flores Sánchez A01383088
+%% Second Order - Runge Kutta Method with Function
+%% Método Runge Kutta de Segundo Orden con Función
 
-%Método Runge - Kutta (2º Orden)
-
-%Limpiar pantalla y variables
+% Clean screen and variables
+% Limpiar pantalla y variables
 clc
 clear
 format shortG
 
-%Datos iniciales
+% Initial data
+% Datos iniciales
 f = @(x,y) -2.2067d-12 * (y^4-81d8);
 x0 = 0;
 y0 = 1200;
 xf = 480;
 n = 3;
 
-%Llamar a la función Runge - Kutta 2º Orden
+% Call the function
+% Llamar a la función
 [vx,vy] = RungeKutta2(f,x0,y0,xf,n);
 
-%Solución Analítica
+% Analytic Solution
+% Solución Analítica
 [valx,valy]=ode45(f,[vx],y0);
 
-%Impresión de resultados
+% Results Printing
+% Impresión de resultados
 disp('            x      y aprox       y real        Error  ')
 disp('------------------------------------------------------')
 disp([vx',vy',valy, abs((valy-vy')./valy)*100])
 
-%Graficar los puntos obtenid
+% Graph
+% Grafica
 clf
 hold on
 plot(vx, valy, 'LineWidth', 2, 'color', 'b',"Marker",'square')
