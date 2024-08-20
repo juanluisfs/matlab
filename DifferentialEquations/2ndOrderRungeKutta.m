@@ -1,33 +1,39 @@
 %% 2nd Order - Runge Kutta Method
 %% Método Runge - Kutta (2º Orden)
 
-%Limpiar pantalla y variables
+% Clean screen and variables
+% Limpiar pantalla y variables
 clc
 clear
 format shortG
 
-%Datos iniciales
+% Initial data
+% Datos iniciales
 f = @(x,y) y + (2*x*(2.7183^(2*x)));
 x0 = 0;
 y0 = 1;
 xf = 0.2;
 n = 2;
 
-%Inicia el método
+% Start method
+% Inicia el método
 h = (xf-x0)/n;
 vx(1) = x0;
 vy(1) = y0;
 e(1) = 100;
 
-%Llenar el vector x
+% Fill the x vector
+% Llenar el vector x
 for i = 1:n
     vx(i+1) = vx(i) + h;
 end
 
-%Solución Analítica
+% Analytic solution
+% Solución Analítica
 [valx,valy]=ode45(f,[vx],y0);
 
-%Llenar el vector y
+% Fill the y vector
+% Llenar el vector y
 for i=1:n
     k1 = f(vx(i),vy(i));
     k2 = f((vx(i)+h),(vy(i)+k1*h));
@@ -36,11 +42,14 @@ for i=1:n
     e(i+1) = abs((valy(i+1)-vy(i))/valy(i+1))*100;
 end
 
+% Print results
+% Imprimir resultados
 disp('            x      y aprox       y real        Error  ')
 disp('------------------------------------------------------')
 disp([vx',vy',valy, abs((valy-vy')./valy)*100])
 
-%Graficar los puntos obtenid
+% Graph of the obtained points
+% Graficar los puntos obtenidos
 clf
 hold on
 plot(vx, valy, 'LineWidth', 2, 'color', 'b',"Marker",'square')
