@@ -1,7 +1,5 @@
-%Juan Luis Flores Sánchez
-%Método de Descomposición LU 
-%Para resolver sistemas de 
-%ecuaciones lineales de 3x3
+%% LU Decomposition Method to Solve 3x3 Lineal Equarion Systems
+%% Método de DEscomposición LU para Resolver Sistemas 3x3 de Ecuaciones Lineales
 
 %Limpiar pantalla y variables
 clc
