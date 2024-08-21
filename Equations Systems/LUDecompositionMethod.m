@@ -16,20 +16,22 @@ I = ["x1";"x2";"x3"];
 % Paso 1. Descomponer A en U y U
     %PASO 1.1 Obtener la matriz U
     U = A;
-        % - PASO 1.11 Eliminar x1 de la segunda ecuación
+        % Step 1.11 Delete x1 from the second equation 
+        % PASO 1.11 Eliminar x1 de la segunda ecuación
         k = -U(2,1) / U(1,1);
         U(2,:) = U(1, :)*k + U(2,:);
         a = k;
 
-        % - PASO 1.12 Eliminar x1 de la tercera ecuación
+        % Step 1.12 Delete x1 from the third equation
+        % Paso 1.12 Eliminar x1 de la tercera ecuación
         k = -U(3,1) / U(1,1);
         U(3,:) = U(1,:)*k + U(3,:);
         b = k;
 
-        % - PASO 1.13 Eliminar x2 de la tercera ecuación
-        %SI EL PIVOTE ES IGUAL A CERO
-        if U(2,2) == 0 %Se intercambia la ecuación 2 y 3
-            aux = U(2,:);
+        % Step 1.13 Delete x2 from the third equation
+        % Paso 1.13 Eliminar x2 de la tercera ecuación
+        if U(2,2) == 0           % If the pivot equals zero        -  Si el pivote es igual a cero
+            aux = U(2,:);        % Equation 2 and 3 change places  -  Se intercambia la ecuación 2 y 3
             U(2,:) = U(3,:);
             U(3,:) = aux(1,:);
         else
@@ -37,7 +39,9 @@ I = ["x1";"x2";"x3"];
             U(3,:) = U(2,:)*k + U(3,:);
             c = k;
         end
-    %PASO 1.2 Obtener la matriz L
+
+    % Step 1.2 Get the L matrix
+    % Paso 1.2 Obtener la matriz L
    L = eye(3);
    L(2,1) = -a;
    L(3,1) = -b;
@@ -55,6 +59,8 @@ x2 = (d2 - U(2,3)*x3)/U(2,2);
 x1 = (d1 - U(1,3)*x3 - U(1,2)*x2)/U(1,1);
 X = [x1;x2;x3];
 
+% Print results
+% Imprimir resultados
 disp("Matriz de coeficientes A")
 disp(A)
 disp(" ")
