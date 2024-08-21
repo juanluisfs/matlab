@@ -1,16 +1,19 @@
 %% LU Decomposition Method to Solve 3x3 Lineal Equarion Systems
 %% Método de DEscomposición LU para Resolver Sistemas 3x3 de Ecuaciones Lineales
 
-%Limpiar pantalla y variables
+% Clean screen and variables
+% Limpiar pantalla y variables
 clc
 clear
 
-%Capturar matriz ampliada del sistema
+% Capture the expanded system matrix
+% Capturar matriz ampliada del sistema
 M = [1,1,0,26;1,0,1,34;0,1,1,28];
 A = [M(1,1:3);M(2,1:3);M(3,1:3)];
 I = ["x1";"x2";"x3"];
 
-%PASO 1. Descomponer A en U y U
+% Step 1. Decompose A in U and U
+% Paso 1. Descomponer A en U y U
     %PASO 1.1 Obtener la matriz U
     U = A;
         % - PASO 1.11 Eliminar x1 de la segunda ecuación
