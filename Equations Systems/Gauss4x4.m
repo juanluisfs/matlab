@@ -1,5 +1,5 @@
-%% Gauss Method to Solve Systems of Lineal Equations in a 3x3 configuration
-%% Método de Gauss para resolver sistemas de ecuaciones lineales con configuración 3x3
+%% Gauss Method to Solve Systems of Lineal Equations in a 4x4 configuration
+%% Método de Gauss para resolver sistemas de ecuaciones lineales con configuración 4x4
 
 % Clean screen and variables
 % Limpiar pantalla y variables
