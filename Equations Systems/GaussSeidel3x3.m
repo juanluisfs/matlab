@@ -45,6 +45,13 @@ while emax > 1
 
     % Print the results of each iteration
     % Imprimir los resultados de cada iteración
+    fprintf("The equation system results using the Gauss-Seidel Method are: \n")
+    fprintf("Iteration %.0f \n", i)
+    fprintf("    x1 = %.4f \n", x1)
+    fprintf("    x2 = %.4f \n", x2)
+    fprintf("    x3 = %.4f \n", x3)
+    fprintf("Maximum Error %.4f \n", emax)
+    fprintf("\n")
     fprintf("Los resultados del sistema de ecuaciones mediante Gauss-Seidel son: \n")
     fprintf("Iteración %.0f \n", i)
     fprintf("    x1 = %.4f \n", x1)
