@@ -24,6 +24,8 @@ emax = 100;
 i = 0;
 a = 0;
 
+% While the maximum error value is greater to 1(%)
+% Mientras que el error máximo sea mayor a 1(%)
 while emax > 1
     x1o = x1;
     x2o = x2;
@@ -40,6 +42,9 @@ while emax > 1
     emax = max([e1,e2,e3]);
     a = i;
     i = a + 1;
+
+    % Print the results of each iteration
+    % Imprimir los resultados de cada iteración
     fprintf("Los resultados del sistema de ecuaciones mediante Gauss-Seidel son: \n")
     fprintf("Iteración %.0f \n", i)
     fprintf("    x1 = %.4f \n", x1)
