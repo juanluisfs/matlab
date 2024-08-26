@@ -23,6 +23,7 @@ V = [7;-7]
 % La solución es igual a la multiuplicación del vector por la matriz inversa de coeficientes
 resultado = inv(C) * V
 
-
+% Print the results
+% Imprimir los resultados
 fprintf("x = %f \n", resultado(1))
 fprintf("y = %f \n", resultado(2))
