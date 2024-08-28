@@ -39,6 +39,6 @@ ylabel('Temperatura (ºC)');
 hold on
 plot(t,T, 'color', 'red', 'LineWidth', 3);
 
-
-%Impresión de resultados 
+% Print the results
+% Impresión de resultados 
 sprintf('La temperatura de la hielera a los %.1f minutos es de %.1f ºC',tiempo, Tt)
