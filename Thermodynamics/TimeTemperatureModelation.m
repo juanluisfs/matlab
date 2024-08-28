@@ -40,6 +40,6 @@ ylabel('Temperatura (ºC)')
 hold on
 plot(t,T, 'color', 'red', 'LineWidth', 3)
 
-%
-%Impresión de resultados 
+% Print the results
+% Impresión de resultados 
 sprintf(['El equilibrio térmico será posible en el tiempo %.0f minutos, %.2f horas o %.1f días'], tet, teth, tetd)
