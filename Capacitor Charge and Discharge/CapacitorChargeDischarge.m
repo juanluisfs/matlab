@@ -1,36 +1,38 @@
-%F1016B.1 Análisis de Sistemas Eléctricos en Sistemas Ingenieriles
-%EQUIPO 2
-
-%Limpiar pantalla, variables y figuras
+% Ckean screen, variables and figures
+% Limpiar pantalla, variables y figuras
 clc
 clear
 
-%Ingresar parámetro de voltaje, capacitancia, resistencia y tiempo
+% Input voltage, capacitance, resistance and time parameters
+% Ingresar parámetro de voltaje, capacitancia, resistencia y tiempo
 prompt = {'Voltaje (V)', 'Capacitancia (F)', 'Resistencia Carga (Ω)', 'Resistencia Descarga (Ω)', 'Tiempo de almacenamiento (s)'};
 digtitle = 'Introduce los valores';
 dims = [1 25];
 definput = {'5','0.0002', '1000', '1000', '10'};
 answer = inputdlg(prompt, digtitle, dims, definput);
 
-%Convertir los parámteros manueales o predefinidos de string a números
+% Convert the input strings to numbers
+% Convertir los parámteros string a números
 V = str2num(answer{1});
 C = str2num(answer{2});
 Rc = str2num(answer{3});
 Rd = str2num(answer{4});
 to = str2num(answer{5});
 
-%Cálculo de diferentes valores a partir de los datos ingresados
-tc = 5*Rc*C;        %Tiempo de Carga
-td = 5*Rd*C;        %Tiempo de Descarga
-Q = C*V;            %Carga
-U = (Q^2)/(2*C);    %Energía acumulada
-tt = tc+to+td;      %Tiempo total
-Pc = (V^2)/(Rc);    %Potencia máxima de carga
-Pd = (V^2)/(Rd);    %Potencia máxima de descarga
-Icmax = V/Rc;       %Corriente máxima de carga
-Idmax = V/Rd;       %Corriente máxima de descarga
+% Calculate the different values from the input data
+% Cálculo de diferentes valores a partir de los datos ingresados
+tc = 5*Rc*C;        % Charge time            -  Tiempo de Carga
+td = 5*Rd*C;        % Discharge time         -  Tiempo de Descarga
+Q = C*V;            % Charge                 -  Carga
+U = (Q^2)/(2*C);    % Store Energy           -  Energía acumulada
+tt = tc+to+td;      % Total time             -  Tiempo total
+Pc = (V^2)/(Rc);    % Max Charge Power       -  Potencia máxima de carga
+Pd = (V^2)/(Rd);    % Max Discharge Power    -  Potencia máxima de descarga
+Icmax = V/Rc;       % Max Charge Current     -  Corriente máxima de carga
+Idmax = V/Rd;       % Max Discharge Current  -  Corriente máxima de descarga
 
-%Preguntar al usuario si quiere ver la gráfica de carga y descarga
+% Ask user for the graph preferences
+% Preguntar al usuario si quiere ver la gráfica de carga y descarga
 respuesta_usuario = questdlg('¿Deseas abrir la gráfica de carga y descarga?','Gráficas');
 switch respuesta_usuario
     case 'Yes' %Si la respuesta es si
