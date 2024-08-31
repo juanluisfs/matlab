@@ -101,34 +101,39 @@ switch respuesta_usuario
         plot(ti2,I2, 'color', 'black', 'LineWidth', 3)
 end
 
-%Preguntar al usuario si quiere ver la gráfica de carga respecto al tiempo
+% Ask user if the charge vs time plot is required
+% Preguntar al usuario si quiere ver la gráfica de carga respecto al tiempo
 respuesta_usuario = questdlg('¿Deseas abrir la gráfica de carga respecto al tiempo?','Gráficas');
 switch respuesta_usuario
-    case 'Yes' %Si la respuesta es si
+    case 'Yes'                               % If answer us yes - Si la respuesta es si
         
-        tq = [0:0.01:(tc+to)];               %Crear vector de tiempo de 0 a tiempo de carga y almacenamiento
-        Q1 = (V*(1-exp(-(tq/(Rc*C))))) * C;  %Calcular carga respecto al vector de tq
+        tq = [0:0.01:(tc+to)];               % Create time vector from 0 to charge and storage time  -  Crear vector de tiempo de 0 a tiempo de carga y almacenamiento
+        Q1 = (V*(1-exp(-(tq/(Rc*C))))) * C;  % Calculate charge using tq vector                      -  Calcular carga respecto al vector de tq
         
-        tq15 = [0:0.001:td];                 %Crear vector de tiempo de 0 a tiempo de descarga
-        Q2 = (V * exp(-(tq15/(Rd*C)))) * C;  %Calcular carga respecto al vector de tq15
-        tq2 = tq15 + (tc + to);              %Sumar el tiempo de carga y almacenamiento al vector tq15
-        
-        %Configuración de la gráfica
+        tq15 = [0:0.001:td];                 % Create time vector from 0 to discharge time           -  Crear vector de tiempo de 0 a tiempo de descarga
+        Q2 = (V * exp(-(tq15/(Rd*C)))) * C;  % Calculate charge using tq15 vector                    -  Calcular carga respecto al vector de tq15
+        tq2 = tq15 + (tc + to);              % Sum charge and storage time using tq15 vector         -  Sumar el tiempo de carga y almacenamiento al vector tq15
+
+        % Graph configuration
+        % Configuración de la gráfica
         figure('Name', 'Gráfica Carga Respecto al Tiempo');
         title('Gráfico Tiempo-Carga');
-        
-        %Establecer etiquetas de los ejes
+
+        % Set axis labels
+        % Establecer etiquetas de los ejes
         xlabel('Tiempo (Segundos)');
         ylabel('Carga (Coulomb)')
         
         hold on
-        
-        %Graficar Q1 y Q2 respecto a sus respectivos vectores de tiempo tq y tq2
+
+        % Plot Q1 and Q2 using their respective time vector tq and tq2
+        % Graficar Q1 y Q2 respecto a sus respectivos vectores de tiempo tq y tq2
         plot(tq,Q1, 'color', 'magenta', 'LineWidth', 3)
         plot(tq2,Q2, 'color', 'magenta', 'LineWidth', 3)
 end
 
-%Imprimir los resultados del circuito
+% Print the circuit results
+% Imprimir los resultados del circuito
 fprintf('Resultados: \n')
 fprintf(['  Tiempo de carga: %.2f segundos \n'], tc)
 fprintf(['  Tiempo de descarga: %.2f segundos \n'], td)
