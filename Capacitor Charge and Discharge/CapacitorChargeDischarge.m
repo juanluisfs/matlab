@@ -37,36 +37,41 @@ respuesta_usuario = questdlg('¿Deseas abrir la gráfica de carga y descarga?','
 switch respuesta_usuario
     case 'Yes' %Si la respuesta es si
         
-        t = [0:0.01:(tc+0.01)];       %Crear vector de tiempo de 0 a tiempo de carga
-        L = V*(1-exp(-(t/(Rc*C))));   %Calcular voltaje respecto al vector t
+        t = [0:0.01:(tc+0.01)];       % Create time vector from 0 to charge time      -  Crear vector de tiempo de 0 a tiempo de carga
+        L = V*(1-exp(-(t/(Rc*C))));   % Calculate voltage based on time vector        -  Calcular voltaje respecto al vector t
         
-        te = [tc:0.01:(tc+to)];       %Crear vector de tiempo de tiempo de carga a tiempo de carga más almacenamiento
-        Le = V*(1-exp(-(te/(Rc*C)))); %Calcular voltaje respecto al vector te
+        te = [tc:0.01:(tc+to)];       % Create time vector from charge to storage     -  Crear vector de tiempo de carga a tiempo de carga más almacenamiento
+        Le = V*(1-exp(-(te/(Rc*C)))); % Calculate voltage based on te vector          -  Calcular voltaje respecto al vector te
         
-        itd = [0:0.01:td];            %Crear vector de tiempo de 0 a tiempo de descarga
-        Lf = V * exp(-(itd/(Rd*C)));  %Calcular voltaje respecto al vector itd
-        td2 = itd + (tc+to);          %Sumar el tiempo de carga y almacenamiento al vector itd
-        
-        %Configuración de la gráfica
+        itd = [0:0.01:td];            % Create time vector from 0 to discharge time   -  Crear vector de tiempo de 0 a tiempo de descarga
+        Lf = V * exp(-(itd/(Rd*C)));  % Calculate voltage based on itd vector         -  Calcular voltaje respecto al vector itd
+        td2 = itd + (tc+to);          % Sum the charge time and storage to itd vector -  Sumar el tiempo de carga y almacenamiento al vector itd
+
+        % Graph configuration
+        % Configuración de la gráfica
         figure('Name', 'Gráfica Carga - Descarga');
         title('Gráfico Tiempo-Voltaje');
-        
-        %Establecer etiquetas de los ejes
+
+        % Set axis labels
+        % Establecer etiquetas de los ejes
         xlabel('Tiempo (Segundos)');
         ylabel('Voltaje (Volts)')
         
         hold on
-        
-        %Graficar L, Le y Lf respecto a sus respectivos vectores de tiempo t, te y td2
+
+        % Plot L, Le, and Lf with respective time vector t, te, and td2
+        % Graficar L, Le y Lf respecto a sus respectivos vectores de tiempo t, te y td2
         plot(t,L, 'color', 'red', 'LineWidth', 3)
         plot(te,Le, 'color', 'green', 'LineWidth', 3)
         plot(td2,Lf, 'color', 'blue', 'LineWidth', 3)
-        
-        %Añadir leyenda para identificar carga, almacenamiento y descarga
+
+        % Add legend to identify charge, storage and discharge
+        % Añadir leyenda para identificar carga, almacenamiento y descarga
         legend({'Carga','Almacenamiento','Descarga'}, 'Location', 'south')
 end
 
-%Preguntar al usuario si quiere ver la gráfica de corriente respecto al tiempo
+% Ask user if the current vs time plot is required
+% Preguntar al usuario si quiere ver la gráfica de corriente respecto al tiempo
 respuesta_usuario = questdlg('¿Deseas abrir la gráfica de corriente respecto al tiempo?','Gráficas');
 switch respuesta_usuario
     case 'Yes' %Si la respuesta es si
