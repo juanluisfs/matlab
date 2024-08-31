@@ -35,7 +35,7 @@ Idmax = V/Rd;       % Max Discharge Current  -  Corriente máxima de descarga
 % Preguntar al usuario si quiere ver la gráfica de carga y descarga
 respuesta_usuario = questdlg('¿Deseas abrir la gráfica de carga y descarga?','Gráficas');
 switch respuesta_usuario
-    case 'Yes' %Si la respuesta es si
+    case 'Yes'                        % If answer is yes - Si la respuesta es si
         
         t = [0:0.01:(tc+0.01)];       % Create time vector from 0 to charge time      -  Crear vector de tiempo de 0 a tiempo de carga
         L = V*(1-exp(-(t/(Rc*C))));   % Calculate voltage based on time vector        -  Calcular voltaje respecto al vector t
@@ -74,14 +74,14 @@ end
 % Preguntar al usuario si quiere ver la gráfica de corriente respecto al tiempo
 respuesta_usuario = questdlg('¿Deseas abrir la gráfica de corriente respecto al tiempo?','Gráficas');
 switch respuesta_usuario
-    case 'Yes' %Si la respuesta es si
+    case 'Yes'                                 % If answer us yes - Si la respuesta es si
         
-        ti = [0:0.01:(tc+to)];                 %Crear vector de tiempo de 0 a tiempo de carga y almacenamiento
-        I = (V/Rc)*exp(-((((1/C)/Rc)*ti)));    %Calcular corriente respecto al vector ti
+        ti = [0:0.01:(tc+to)];                 % Create time vector from 0 to charge time      -  Crear vector de tiempo de 0 a tiempo de carga
+        I = (V/Rc)*exp(-((((1/C)/Rc)*ti)));    % Calculate current based on ti vector          -  Calcular corriente respecto al vector ti
         
-        ti1 = [0:0.01:td];                     %Crear vector de tiempo de 0 a tiempo de descarga
-        I2 = (V/Rd)*(exp(-(((1/C)/Rd)*ti1)));  %Calcular voltaje respecto al vector de ti1
-        ti2 = ti1 + (tc+to);                   %Sumar el tiempo de carga y almacenamiento al vector ti2
+        ti1 = [0:0.01:td];                     % Create time vector from 0 to discharge time   -  Crear vector de tiempo de 0 a tiempo de descarga
+        I2 = (V/Rd)*(exp(-(((1/C)/Rd)*ti1)));  % Calculate voltage based on ti1 vector         -  Calcular voltaje respecto al vector de ti1
+        ti2 = ti1 + (tc+to);                   % Sum charge and storage time to ti2 vector     -  Sumar el tiempo de carga y almacenamiento al vector ti2
         
         %Configuración de la gráfica
         figure('Name', 'Gráfica Corriente Respecto al Tiempo');
