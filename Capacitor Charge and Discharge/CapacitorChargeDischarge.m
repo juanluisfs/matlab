@@ -82,18 +82,21 @@ switch respuesta_usuario
         ti1 = [0:0.01:td];                     % Create time vector from 0 to discharge time   -  Crear vector de tiempo de 0 a tiempo de descarga
         I2 = (V/Rd)*(exp(-(((1/C)/Rd)*ti1)));  % Calculate voltage based on ti1 vector         -  Calcular voltaje respecto al vector de ti1
         ti2 = ti1 + (tc+to);                   % Sum charge and storage time to ti2 vector     -  Sumar el tiempo de carga y almacenamiento al vector ti2
-        
-        %Configuración de la gráfica
+
+        % Graph configuration
+        % Configuración de la gráfica
         figure('Name', 'Gráfica Corriente Respecto al Tiempo');
         title('Gráfico Tiempo-Corriente');
-        
-        %Establecer etiquetas de los ejes
+
+        % Set axis labels
+        % Establecer etiquetas de los ejes
         xlabel('Tiempo (Segundos)');
         ylabel('Corriente (Ampere)')
         
         hold on 
-        
-        %Graficar I e I2 respecto a sus respectivos vectores de tiempo ti y ti2
+
+        % Plot I and I2 using their respective ti and ti2 time vectors
+        % Graficar I e I2 respecto a sus respectivos vectores de tiempo ti y ti2
         plot(ti,I, 'color', 'black', 'LineWidth', 3)
         plot(ti2,I2, 'color', 'black', 'LineWidth', 3)
 end
@@ -136,5 +139,3 @@ fprintf(['  Potencia máxima de carga: %.5f Watts \n'], Pc)
 fprintf(['  Potencia máxima de descarga: %.5f Watts \n \n'], Pd)
 fprintf(['  Corriente máxima de carga: %.5f Amperes \n'], Icmax)
 fprintf(['  Corriente máxima de descarga: %.5f Amperes \n'], Idmax)
-
-%Juan Luis Flores Sánchez A01383088
