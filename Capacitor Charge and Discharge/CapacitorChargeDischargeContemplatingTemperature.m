@@ -35,37 +35,42 @@ Pd = (V^2)/(Rd);                          % Macimum Discharge Power             
 Icmax = V/Rc;                             % Maximum Charge Current                     -  Corriente máxima de carga
 Idmax = V/Rd;                             % Maximum Discharge Current                  -  Corriente máxima de descarga
 
-%Preguntar al usuario si quiere ver la gráfica de carga y descarga
+% Ask user if the charge and discharge graphs are desired
+% Preguntar al usuario si quiere ver la gráfica de carga y descarga
 respuesta_usuario = questdlg('¿Deseas abrir la gráfica de carga y descarga?','Gráficas');
 switch respuesta_usuario
-    case 'Yes' %Si la respuesta es si
+    case 'Yes'                        % If answer is yes                                            -  Si la respuesta es si
         
-        t = [0:0.01:(tc+0.01)];       %Crear vector de tiempo de 0 a tiempo de carga
-        L = V*(1-exp(-(t/(Rc*C))));   %Calcular voltaje respecto al vector t
+        t = [0:0.01:(tc+0.01)];       % Create time vector from 0 to charge time                    -  Crear vector de tiempo de 0 a tiempo de carga
+        L = V*(1-exp(-(t/(Rc*C))));   % Calculate voltage based on t vector                         -  Calcular voltaje respecto al vector t
         
-        te = [tc:0.01:(tc+to)];       %Crear vector de tiempo de tiempo de carga a tiempo de carga más almacenamiento
-        Le = V*(1-exp(-(te/(Rc*C)))); %Calcular voltaje respecto al vector te
+        te = [tc:0.01:(tc+to)];       % Create time vector from charge to charge plus storage time  -  Crear vector de tiempo de tiempo de carga a tiempo de carga más almacenamiento
+        Le = V*(1-exp(-(te/(Rc*C)))); % Calculate voltage from te vector                            -  Calcular voltaje respecto al vector te
         
-        itd = [0:0.01:td];            %Crear vector de tiempo de 0 a tiempo de descarga
-        Lf = V * exp(-(itd/(Rd*C)));  %Calcular voltaje respecto al vector itd
-        td2 = itd + (tc+to);          %Sumar el tiempo de carga y almacenamiento al vector itd
-        
-        %Configuración de la gráfica
+        itd = [0:0.01:td];            % Create time vector from 0 to discharge time                 -  Crear vector de tiempo de 0 a tiempo de descarga
+        Lf = V * exp(-(itd/(Rd*C)));  % Calculate voltage from itd vector                           -  Calcular voltaje respecto al vector itd
+        td2 = itd + (tc+to);          % Sum charge and storage time to itd vector                   -  Sumar el tiempo de carga y almacenamiento al vector itd
+
+        % Graph Configuration
+        % Configuración de la gráfica
         figure('Name', 'Gráfica Carga - Descarga');
         title('Gráfico Tiempo-Voltaje');
-        
-        %Establecer etiquetas de los ejes
+
+        % Set axis labels
+        % Establecer etiquetas de los ejes
         xlabel('Tiempo (Segundos)');
         ylabel('Voltaje (Volts)')
         
         hold on
-        
+
+        % Plot L, Le and Lf using the respective time vectors t, te and td2
         %Graficar L, Le y Lf respecto a sus respectivos vectores de tiempo t, te y td2
         plot(t,L, 'color', 'red', 'LineWidth', 3)
         plot(te,Le, 'color', 'green', 'LineWidth', 3)
         plot(td2,Lf, 'color', 'blue', 'LineWidth', 3)
-        
-        %Añadir leyenda para identificar carga, almacenamiento y descarga
+
+        % Add legend to identify charge, storage and discharge
+        % Añadir leyenda para identificar carga, almacenamiento y descarga
         legend({'Carga','Almacenamiento','Descarga'}, 'Location', 'south')
 end
 
@@ -142,5 +147,3 @@ fprintf(['  Potencia máxima de carga: %.5f Watts \n'], Pc)
 fprintf(['  Potencia máxima de descarga: %.5f Watts \n \n'], Pd)
 fprintf(['  Corriente máxima de carga: %.5f Amperes \n'], Icmax)
 fprintf(['  Corriente máxima de descarga: %.5f Amperes \n'], Idmax)
-
-%Juan Luis Flores Sánchez A01383088
