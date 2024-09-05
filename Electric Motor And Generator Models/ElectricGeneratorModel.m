@@ -1,6 +1,3 @@
-%F1017B.1 Análisis de Sistemas Electromagnéticos en Sistemas Ingenieriles
-%EQUIPO 6
-
 clc
 clear
 
