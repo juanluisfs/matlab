@@ -145,5 +145,3 @@ fprintf(['      Campo Magnético (B):                   %.4f Teslas \n'], Bmax)
 fprintf(['      Área de la Espira (A):                 %.4f Metros Cuadrados \n'], Amax)
 fprintf(['      Número de Vueltas de la Bobina (N):    %.4f \n'], Nmax)
 fprintf(['      Voltaje Aplicado (V):                  %.4f Voltios \n\n'], Vmax)
-
-%Juan Luis Flores Sánchez A01383088
