@@ -354,5 +354,3 @@ switch respuesta_usuario
                 end
         end
 end
-
-%Juan Luis Flores Sánchez A01383088
