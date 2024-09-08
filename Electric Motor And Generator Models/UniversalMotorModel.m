@@ -116,5 +116,3 @@ fprintf(['  Fuerza máxima:              %.4f Newtons \n'], FM)
 fprintf(['  Momento Dipolar Magnético:  %.4f Webers \n'], mdm)
 fprintf(['  Torque Máximo:              %.4f Newton - Metro \n'], taumax)
 fprintf(['  Inductancia:                %.6f Henrys \n \n'], Inducr)
-
-%Juan Luis Flores Sánchez A01383088
