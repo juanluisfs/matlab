@@ -3,6 +3,8 @@
 clc
 clear
 
+% Ask user for the initial data
+% Preguntar al usuario los datos iniciales
 prompt = {'Campo Magnético [T]','Área de la Espira [m2]','Número de Vueltas de la Bobina','Frecuencia [rpm]'};
 digtitle = 'Introduce los Valores del Primer Generador';
 dims = [1 25];
