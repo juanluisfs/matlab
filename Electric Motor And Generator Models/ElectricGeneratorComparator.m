@@ -18,6 +18,8 @@ A1 = str2num(answer{2});
 N1 = str2num(answer{3});
 RPM1 = str2num(answer{4});
 
+% Ask user for the second generator initial data
+% Preguntat al usuario por datos iniciales del segundo generador
 prompt = {'Campo Magnético [T]','Área de la Espira [m2]','Número de Vueltas de la Bobina','Frecuencia [rpm]'};
 digtitle = 'Introduce los Valores del Segundo Generador';
 dims = [1 25];
