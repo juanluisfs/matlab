@@ -58,7 +58,10 @@ A = [Amin:Ai:Amax];
 N = [Nmin:Ni:Nmax];
 RPM = [RPMmin:RPMi:RPMmax];
 
+% Create figure
+% Crear figura
 figure('Name','Variación del Voltaje Inducido Respecto a la Diferencia de los Valores Introducidos','Position',[1,1000,5000,3000])
+
 
 subplot(2,2,1)
 EB = (2/pi)*B;
