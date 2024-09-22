@@ -51,6 +51,8 @@ Ai = (Amax-Amin)/100;
 Ni = (Nmax-Nmin)/100;
 RPMi = (RPMmax-RPMmin)/100;
 
+% Create vectors of parameters change
+% Crear vectores de cambio en parámetros
 B = [Bmin:Bi:Bmax];
 A = [Amin:Ai:Amax];
 N = [Nmin:Ni:Nmax];
