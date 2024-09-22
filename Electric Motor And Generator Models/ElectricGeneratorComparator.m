@@ -33,6 +33,8 @@ A2 = str2num(answer{2});
 N2 = str2num(answer{3});
 RPM2 = str2num(answer{4});
 
+% Set maximum and minimum values of the initial data
+% Establecer valores máximos y mínimos de los datos iniciales
 Bmin = min(B1,B2);
 Bmax = max(B1,B2);
 Amin = min(A1,A2);
