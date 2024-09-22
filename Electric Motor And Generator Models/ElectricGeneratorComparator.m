@@ -44,6 +44,8 @@ Nmax = max(N1,N2);
 RPMmin = min(RPM1,RPM2);
 RPMmax = max(RPM1,RPM2);
 
+% Calculate the percentage of generator improvement
+% Calcular porcentaje de mejora del generador
 Bi = (Bmax-Bmin)/100;
 Ai = (Amax-Amin)/100;
 Ni = (Nmax-Nmin)/100;
