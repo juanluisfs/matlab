@@ -107,6 +107,8 @@ plot(N1,EN1,'sk','Marker','o','MarkerFaceColor','magenta','MarkerSize',8,'LineWi
 plot(N2,EN2,'sk','Marker','o','MarkerFaceColor','yellow','MarkerSize',8,'LineWidth',2)
 legend('Variación del Voltaje Inducido','Primer Valor de A','Segundo Valor de A','Location','Southeast')
 
+% Plot the induction voltage vs frequency
+% Graficar el voltaje inducido vs frecuencia
 subplot(2,2,4)
 w = RPM*pi/30;
 ERPM = (2/pi)*w;
