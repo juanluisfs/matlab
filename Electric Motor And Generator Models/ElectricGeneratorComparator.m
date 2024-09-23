@@ -63,7 +63,7 @@ RPM = [RPMmin:RPMi:RPMmax];
 figure('Name','Variación del Voltaje Inducido Respecto a la Diferencia de los Valores Introducidos','Position',[1,1000,5000,3000])
 
 % Plot the induction voltage vs magnetic field plot
-% Graficar la gráfica de voltaje inducido vs campo magnético
+% Graficar el voltaje inducido vs campo magnético
 subplot(2,2,1)
 EB = (2/pi)*B;
 EB1 = (2/pi)*B1;
@@ -92,6 +92,8 @@ plot(A1,EA1,'sk','Marker','o','MarkerFaceColor','magenta','MarkerSize',8,'LineWi
 plot(A2,EA2,'sk','Marker','o','MarkerFaceColor','yellow','MarkerSize',8,'LineWidth',2)
 legend('Variación del Voltaje Inducido','Primer Valor de A','Segundo Valor de A','Location','Southeast')
 
+% Plot the induction voltage vs coil turn number
+% Graficar el voltaje inducido vs número de vueltas de la bobina
 subplot(2,2,3)
 EN = (2/pi)*N;
 EN1 = (2/pi)*N1;
