@@ -62,7 +62,8 @@ RPM = [RPMmin:RPMi:RPMmax];
 % Crear figura
 figure('Name','Variación del Voltaje Inducido Respecto a la Diferencia de los Valores Introducidos','Position',[1,1000,5000,3000])
 
-
+% Plot the induction voltage vs magnetic field plot
+% Graficar la gráfica de voltaje inducido vs campo magnético
 subplot(2,2,1)
 EB = (2/pi)*B;
 EB1 = (2/pi)*B1;
