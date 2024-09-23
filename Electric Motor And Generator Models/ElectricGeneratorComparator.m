@@ -77,6 +77,8 @@ plot(B1,EB1,'sk','Marker','o','MarkerFaceColor','magenta','MarkerSize',8,'LineWi
 plot(B2,EB2,'sk','Marker','o','MarkerFaceColor','yellow','MarkerSize',8,'LineWidth',2)
 legend('Variación del Voltaje Inducido','Primer Valor de B','Segundo Valor de B','Location','Southeast')
 
+% Plot the induction voltage vs spiral area
+% Graficar el voltaje inducido vs área de espiral
 subplot(2,2,2)
 EA = (2/pi)*A;
 EA1 = (2/pi)*A1;
