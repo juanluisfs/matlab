@@ -133,7 +133,6 @@ close all
 % Plot the induction voltage comparation
 % Graficar la comparación de voltajes inducidos
 figure('Name','Comparación de los Voltajes Inducidos Medios','Position',[1,1000,5000,3000])
-
 o = 0:1:10;
 E1 = (2/pi)*N1*A1*B1*w1+(o*0);
 E2 = (2/pi)*N2*A2*B2*w2+(o*0);
@@ -147,6 +146,8 @@ plot(o,E2,'Color','b','LineWidth',2)
 plot(o,EM,'Color','k','LineWidth',2)
 legend('Primer Generador','Segundo Generador','Mejor Opción con los Valores Introducidos','Location','Southeast')
 
+% Close the figures after 10 seconds
+% Cerrar las figuras después de 10 segundos
 pause(10)
 close all
 
