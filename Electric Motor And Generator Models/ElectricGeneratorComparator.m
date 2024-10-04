@@ -125,6 +125,8 @@ plot(RPM1,ERPM1,'sk','Marker','o','MarkerFaceColor','magenta','MarkerSize',8,'Li
 plot(RPM2,ERPM2,'sk','Marker','o','MarkerFaceColor','yellow','MarkerSize',8,'LineWidth',2)
 legend('Variación del Voltaje Inducido','Primer Valor de A','Segundo Valor de A','Location','Southeast')
 
+% Close the figures after 10 seconds
+% Cerrar las figuras después de 10 segundos
 pause(10)
 close all
 
