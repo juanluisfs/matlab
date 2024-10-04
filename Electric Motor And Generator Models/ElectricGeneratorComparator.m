@@ -156,6 +156,8 @@ dA = EA(length(EA))-EA(1);
 dN = EN(length(EN))-EN(1);
 dRPM = ERPM(length(ERPM))-ERPM(1);
 
+% Print the results of the comparation
+% Imprimir los resultados de la comparación
 fprintf('Resultados - Comparación de la Diferencia de Magnitudes: \n')
 fprintf(['  Variación de Voltaje por Diferencia de Campos Magnéticos:                %.4f Voltios \n'], dB)
 fprintf(['  Variación de Voltaje por Diferencia de Áreas de las Espiras:             %.4f Voltios \n'], dA)
