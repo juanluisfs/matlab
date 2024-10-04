@@ -130,6 +130,8 @@ legend('Variación del Voltaje Inducido','Primer Valor de A','Segundo Valor de A
 pause(10)
 close all
 
+% Plot the induction voltage comparation
+% Graficar la comparación de voltajes inducidos
 figure('Name','Comparación de los Voltajes Inducidos Medios','Position',[1,1000,5000,3000])
 
 o = 0:1:10;
