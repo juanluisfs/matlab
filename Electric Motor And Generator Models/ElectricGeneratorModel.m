@@ -3,6 +3,8 @@
 clc
 clear
 
+% Ask user to input the parameters
+
 prompt = {'Campo (B) [T]', 'Radio (r) [m]', 'Frecuencia (f) [rpm]','Resistencia (R) [Ω]', 'Número de vueltas de la bobina (N)', 'Ciclos (Ne)'};
 digtitle = 'Introduce los valores';
 dims = [1 25];
