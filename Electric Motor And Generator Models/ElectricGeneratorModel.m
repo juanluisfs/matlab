@@ -20,6 +20,8 @@ R = str2num(answer{4});
 N = str2num(answer{5});
 Ne = str2num(answer{6});
 
+% Calculate coil parameters
+% Calcular parámetros de la bobina
 A = pi * r^2;
 f = rpm/60;
 T = 1/f;
