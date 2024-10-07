@@ -27,6 +27,7 @@ f = rpm/60;
 T = 1/f;
 TNe = T * Ne;
 
+% Create time vector
 t = [0:0.0001:TNe];
 
 R4 = T / 4;
