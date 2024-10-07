@@ -27,7 +27,8 @@ f = rpm/60;
 T = 1/f;
 TNe = T * Ne;
 
-% Create time vector
+% Create total time vector (time by cycle number)
+% Crear vector de tiempo total (tiempo por número de ciclos)
 t = [0:0.0001:TNe];
 
 R4 = T / 4;
