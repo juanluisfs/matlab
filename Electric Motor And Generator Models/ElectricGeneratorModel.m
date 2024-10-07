@@ -11,6 +11,8 @@ dims = [1 25];
 definput = {'0.2','0.6', '1000', '10', '1', '4'};
 answer = inputdlg(prompt, digtitle, dims, definput);
 
+% Convert the input string to number
+
 B = str2num(answer{1});
 r = str2num(answer{2});
 rpm = str2num(answer{3});
