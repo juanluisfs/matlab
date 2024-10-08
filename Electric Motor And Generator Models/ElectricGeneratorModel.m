@@ -31,6 +31,8 @@ TNe = T * Ne;
 % Crear vector de tiempo total (tiempo por número de ciclos)
 t = [0:0.0001:TNe];
 
+% Calculate the values each quarter of the cycle
+% Calcular los valores cada cuarto de ciclo
 R4 = T / 4;
 n = Ne*4;
 t4 = [0];
