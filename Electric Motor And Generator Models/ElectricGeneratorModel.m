@@ -51,6 +51,8 @@ end
 % Preguntar al usuario para elegir una opción de análisis
 respuesta_usuario = questdlg('Indica el tipo de generador a analizar','Tipo de Generador','Dinamo','Alternador','Ambos','Cancel');
 switch respuesta_usuario
+    % If user choice is "Dinamo"
+    % Si la elección del usuario es "Dinamo"
     case 'Dinamo'
         phi = abs(B*A*cos(2*pi*f*t));
         efem = abs(N*2*pi*f*B*A*sin(2*pi*f*t));
