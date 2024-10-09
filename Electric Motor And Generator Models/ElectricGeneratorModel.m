@@ -40,6 +40,8 @@ for i = 1:n
     t4(i+1) = t4(i) + R4;
 end
 
+% Create discrete vector time
+
 tp = [0];
 for i = 1:Ne
     tp(i+1) = tp(i) + T;
