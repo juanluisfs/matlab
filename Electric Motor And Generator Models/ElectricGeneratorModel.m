@@ -41,7 +41,7 @@ for i = 1:n
 end
 
 % Create discrete vector time
-
+% Crear vector de tiempo discreto
 tp = [0];
 for i = 1:Ne
     tp(i+1) = tp(i) + T;
