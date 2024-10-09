@@ -47,6 +47,8 @@ for i = 1:Ne
     tp(i+1) = tp(i) + T;
 end
 
+% Ask user to choose an analysis option
+% Preguntar al usuario para elegir una opción de análisis
 respuesta_usuario = questdlg('Indica el tipo de generador a analizar','Tipo de Generador','Dinamo','Alternador','Ambos','Cancel');
 switch respuesta_usuario
     case 'Dinamo'
