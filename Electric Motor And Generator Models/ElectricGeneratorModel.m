@@ -220,7 +220,9 @@ switch respuesta_usuario
                 pause(0.0001)
                 end
         end
-        
+    
+    % If user choice is "Dinamo"
+    % Si la elección del usuario es "Dinamo"
     case 'Ambos'
         phi = abs(B*A*cos(2*pi*f*t));
         efem = abs(N*2*pi*f*B*A*sin(2*pi*f*t));
