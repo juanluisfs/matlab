@@ -136,6 +136,8 @@ switch respuesta_usuario
                 end
         end
     
+    % If user choice is "Dinamo"
+    % Si la elección del usuario es "Dinamo"
     case 'Alternador'
         phi = B*A*cos(2*pi*f*t);
         efem = N*2*pi*f*B*A*sin(2*pi*f*t);
