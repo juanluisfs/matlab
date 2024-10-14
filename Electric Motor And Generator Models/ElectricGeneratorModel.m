@@ -349,7 +349,9 @@ switch respuesta_usuario
         fprintf(['  Corriente inducida máxima: %.2f Amperios \n \n'], Im)
         
         lar = length(t);
-        
+
+        % Ask user about the simulation activation
+        % Preguntar al usuario sobre la activación de la simulación
         respuesta_usuario = questdlg('¿Deseas activar la simulación?','Simulación','Yes','No','Cancel');
         switch respuesta_usuario
             case 'Yes' 
