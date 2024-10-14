@@ -354,6 +354,8 @@ switch respuesta_usuario
         % Preguntar al usuario sobre la activación de la simulación
         respuesta_usuario = questdlg('¿Deseas activar la simulación?','Simulación','Yes','No','Cancel');
         switch respuesta_usuario
+            % If the answer is "Yes"
+            % Si la respuesta es "Yes"
             case 'Yes' 
                 for i= 1:lar
                 subplot(2,3,1)
