@@ -70,7 +70,8 @@ switch respuesta_usuario
         % Create Dynamo Analysis Plot
         % Crear grªfica de análisis del dinamo
         figure('Name','Análisis de Dinamo','Position',[1,1000,5000,400])
-        
+
+        % Plot Mahnetic Flux over Time
         subplot(1,3,1)
         hold on
         grid on
