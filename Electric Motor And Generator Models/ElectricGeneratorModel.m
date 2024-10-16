@@ -68,6 +68,7 @@ switch respuesta_usuario
         Iindp = abs(efemp / R);
 
         % Create Dynamo Analysis Plot
+        % Crear grªfica de análisis del dinamo
         figure('Name','Análisis de Dinamo','Position',[1,1000,5000,400])
         
         subplot(1,3,1)
