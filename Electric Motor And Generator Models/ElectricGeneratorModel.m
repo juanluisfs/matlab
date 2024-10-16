@@ -72,6 +72,7 @@ switch respuesta_usuario
         figure('Name','Análisis de Dinamo','Position',[1,1000,5000,400])
 
         % Plot Mahnetic Flux over Time
+        % Graficar Flujo Magnético en el Tiempo
         subplot(1,3,1)
         hold on
         grid on
