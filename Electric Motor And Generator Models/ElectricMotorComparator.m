@@ -3,6 +3,7 @@
 clc
 clear
 
+%
 prompt = {'Campo Magnético [T]','Área de la Espira [m2]','Número de Vueltas de la Bobina','Voltaje Aplicado'};
 digtitle = 'Introduce los Valores del Primer Motor';
 dims = [1 25];
