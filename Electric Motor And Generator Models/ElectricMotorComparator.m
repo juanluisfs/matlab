@@ -11,7 +11,7 @@ dims = [1 25];
 definput = {'0.2','0.2','10','1000'};
 answer = inputdlg(prompt, digtitle, dims, definput);
 
-%
+% Convert string input to number
 %
 B1 = str2num(answer{1});
 A1 = str2num(answer{2});
