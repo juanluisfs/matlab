@@ -12,6 +12,7 @@ definput = {'0.2','0.2','10','1000'};
 answer = inputdlg(prompt, digtitle, dims, definput);
 
 %
+%
 B1 = str2num(answer{1});
 A1 = str2num(answer{2});
 N1 = str2num(answer{3});
