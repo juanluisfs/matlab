@@ -71,7 +71,7 @@ switch respuesta_usuario
         % Crear grªfica de análisis del dinamo
         figure('Name','Análisis de Dinamo','Position',[1,1000,5000,400])
 
-        % Plot Mahnetic Flux over Time
+        % Plot Magnetic Flux over Time
         % Graficar Flujo Magnético en el Tiempo
         subplot(1,3,1)
         hold on
