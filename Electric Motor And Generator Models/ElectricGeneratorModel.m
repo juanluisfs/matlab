@@ -87,6 +87,7 @@ switch respuesta_usuario
                 legend('Flujo Magnético','Indicador 1/4 de Revolución','Inicio y Fin de 1 Revolución','Simulación','Location','southoutside')
         
 				% Plot Induced Voltage over Time
+				% Graficar Voltaje Inducido en el Tiempo
         subplot(1,3,2)
         hold on
         grid on
