@@ -86,6 +86,7 @@ switch respuesta_usuario
     'MarkerFaceColor','yellow','MarkerSize',10,'LineWidth',2);
                 legend('Flujo Magnético','Indicador 1/4 de Revolución','Inicio y Fin de 1 Revolución','Simulación','Location','southoutside')
         
+				% Plot Induced Voltage over Time
         subplot(1,3,2)
         hold on
         grid on
