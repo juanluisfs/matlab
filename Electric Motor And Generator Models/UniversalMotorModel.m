@@ -4,7 +4,7 @@ clc
 clear
 
 % Ask user for universal motor data
-
+% Pedir al usuario los datos iniciales de motor universal
 prompt = {'Permeabilidad del medio (Tm)', 'Corriente (A)', 'Número de Vuelta de la Bobina', 'Longitud del Electroimán (m)','Área de la Espira (m2)'};
 digtitle = 'Valores del Electroimán';
 dims = [1 25];
