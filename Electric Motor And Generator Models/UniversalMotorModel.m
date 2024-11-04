@@ -111,6 +111,8 @@ end
 
 taumax = max(tau);
 
+% Print the results
+
 fprintf('Resultados del Electroimán: \n')
 fprintf(['  Campo Magnético Generado:   %.4f Teslas \n'], B)
 fprintf(['  Inductancia:                %.6f Henrys \n \n'], Induce)
