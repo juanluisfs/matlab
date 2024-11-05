@@ -90,6 +90,8 @@ grid on
 % Preguntar al usuario acerca de la visualización de la figura
 respuesta_usuario = questdlg('Indica la figura que deseas visualizar','Tipo de Figura','Gráfica','Simulación','Cancel');
 switch respuesta_usuario
+
+    % If the answer is "Graph"
     case 'Gráfica'
         plot(t,tau,'Color','r','LineWidth',2)
         plot(t4,tau4, 'sr', 'LineWidth', 2,'Marker',"*")
