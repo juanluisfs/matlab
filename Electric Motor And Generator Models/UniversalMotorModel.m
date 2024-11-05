@@ -92,6 +92,7 @@ respuesta_usuario = questdlg('Indica la figura que deseas visualizar','Tipo de F
 switch respuesta_usuario
 
     % If the answer is "Graph"
+    % Si la respuesta es "Gráfica"
     case 'Gráfica'
         plot(t,tau,'Color','r','LineWidth',2)
         plot(t4,tau4, 'sr', 'LineWidth', 2,'Marker',"*")
