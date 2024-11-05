@@ -87,7 +87,7 @@ hold on
 grid on
 
 % Ask user about the figure display
-
+% Preguntar al usuario acerca de la visualización de la figura
 respuesta_usuario = questdlg('Indica la figura que deseas visualizar','Tipo de Figura','Gráfica','Simulación','Cancel');
 switch respuesta_usuario
     case 'Gráfica'
