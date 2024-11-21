@@ -100,6 +100,7 @@ switch respuesta_usuario
         legend('Torque','Indicador 1/4 de Revolución','Inicio y Fin de 1 Revolución','Location','southoutside')
 
     % If the answer is "Simulation"
+    % Si la respuesta es "Simulación"
     case 'Simulación'
         temp=plot (0,0,'Marker','o','MarkerSize',10,'MarkerFaceColor','r');  
         y_al = animatedline ( 'Color','r','LineWidth',2); 
