@@ -114,6 +114,7 @@ switch respuesta_usuario
         legend('Torque','','Indicador 1/4 de Revolución','Inicio y Fin de 1 Revolución','Location','southoutside')
 end
 
+% Get the maximum value of Tau
 taumax = max(tau);
 
 % Print the results
