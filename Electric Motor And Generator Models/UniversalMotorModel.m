@@ -98,7 +98,8 @@ switch respuesta_usuario
         plot(t4,tau4, 'sr', 'LineWidth', 2,'Marker',"*")
         plot(tp,taup, 'sk', 'LineWidth', 4,'Marker',"o", 'MarkerSize',5)
         legend('Torque','Indicador 1/4 de Revolución','Inicio y Fin de 1 Revolución','Location','southoutside')
-        
+
+    % If the answer is "Simulation"
     case 'Simulación'
         temp=plot (0,0,'Marker','o','MarkerSize',10,'MarkerFaceColor','r');  
         y_al = animatedline ( 'Color','r','LineWidth',2); 
