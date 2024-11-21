@@ -115,6 +115,7 @@ switch respuesta_usuario
 end
 
 % Get the maximum value of Tau
+% Obtener el valor máximo de Tau
 taumax = max(tau);
 
 % Print the results
