@@ -81,6 +81,7 @@ figure('Name', 'Gráfica - Torque Respecto al Tiempo','Position',[1 1000 5000 30
 title('Gráfico Torque vs Tiempo');
 
 % Plot configuration
+% Configuración de la Gráfica
 xlabel('Tiempo (Segundos)');
 ylabel('Torque (Newton - Metro)');        
 hold on
