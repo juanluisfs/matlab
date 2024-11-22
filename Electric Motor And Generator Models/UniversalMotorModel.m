@@ -78,6 +78,7 @@ end
 taup = abs(mdm * B * sin((2*pi*f*tp)+rad));
 
 % Create figure
+% Crear figura
 figure('Name', 'Gráfica - Torque Respecto al Tiempo','Position',[1 1000 5000 3000]);
 title('Gráfico Torque vs Tiempo');
 
