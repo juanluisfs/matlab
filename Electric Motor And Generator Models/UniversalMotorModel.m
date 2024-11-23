@@ -12,6 +12,7 @@ definput = {'0.000001257','0.564','110','0.075','0.00025'};
 answer = inputdlg(prompt, digtitle, dims, definput);
 
 % Convert input string to number
+% Convertir string de entrada a número
 miu = str2num(answer{1});
 Ie = str2num(answer{2});
 Ne = str2num(answer{3});
