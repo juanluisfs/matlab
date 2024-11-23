@@ -20,6 +20,7 @@ Le = str2num(answer{4});
 Ae = str2num(answer{5});
 
 % Ask user for coil data
+% Pedir al usuario los datos de la bobina
 prompt = {'Área de la Espira (m2)', 'Corriente (A)', 'Número de Vuelta de la Bobina','Longitud del Rotor (m)','Ángulo del Rotor Respecto al Campo Magnético (º)'};
 digtitle = 'Valores del Rotor';
 dims = [1 25];
