@@ -28,6 +28,7 @@ definput = {'0.00008','0.808','90','0.07','90'};
 answer = inputdlg(prompt, digtitle, dims, definput);
 
 % Convert input string to number
+% Convertir string de entrada a número
 A = str2num(answer{1});
 Ir = str2num(answer{2});
 Nr = str2num(answer{3});
