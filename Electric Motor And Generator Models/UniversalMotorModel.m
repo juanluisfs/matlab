@@ -35,6 +35,7 @@ Nr = str2num(answer{3});
 Lr = str2num(answer{4});
 desp = str2num(answer{5});
 
+% Ask user for simulation parameters
 prompt = {'Revoluciones Muestra', 'Tiempo de la Muestra (s)'};
 digtitle = 'Valores de la Muestra';
 dims = [1 25];
