@@ -18,7 +18,8 @@ A1 = str2num(answer{2});
 N1 = str2num(answer{3});
 V1 = str2num(answer{4});
 
-% Ask use for coil data
+% Ask user for coil data
+% Preguntar al usuario por los datos de la bobina
 prompt = {'Campo Magnético [T]','Área de la Espira [m2]','Número de Vueltas de la Bobina','Voltaje Aplicado'};
 digtitle = 'Introduce los Valores del Segundo Motor';
 dims = [1 25];
