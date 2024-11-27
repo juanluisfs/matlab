@@ -27,7 +27,7 @@ definput = {'0.5','0.1','1','10'};
 answer = inputdlg(prompt, digtitle, dims, definput);
 
 % Convert input string to number
-
+% Convertir string de entrada a número
 B2 = str2num(answer{1});
 A2 = str2num(answer{2});
 N2 = str2num(answer{3});
