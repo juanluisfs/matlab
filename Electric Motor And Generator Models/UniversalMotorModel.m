@@ -3,7 +3,7 @@
 clc
 clear
 
-jh
+
 
 % Ask user for universal motor data
 % Pedir al usuario los datos iniciales de motor universal
