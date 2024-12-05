@@ -9,7 +9,7 @@ r1 = 1300
 r2 = 2100
 r3 = 4780
 
-%
+
 suma = (r1*r2)+(r2*r3)+(r3*r1);
 
 % Print Star (Y) Results
