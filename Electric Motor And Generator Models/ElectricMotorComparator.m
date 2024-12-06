@@ -3,7 +3,6 @@
 clc
 clear
 
-lihfs
 
 % Ask user for the coil initial data
 % Preguntar al usuario por los datos iniciales de la bobina
