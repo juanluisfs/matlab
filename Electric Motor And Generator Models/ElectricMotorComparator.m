@@ -3,7 +3,6 @@
 clc
 clear
 
-
 % Ask user for the coil initial data
 % Preguntar al usuario por los datos iniciales de la bobina
 prompt = {'Campo Magnético [T]','Área de la Espira [m2]','Número de Vueltas de la Bobina','Voltaje Aplicado'};
