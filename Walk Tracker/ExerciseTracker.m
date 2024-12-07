@@ -2,7 +2,7 @@
 %  Made 2022/10/02
 
 % Clean screen and variables
-%
+% Limpiar pantalla y variables
 clc
 clear
 close all
