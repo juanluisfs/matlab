@@ -1,6 +1,7 @@
 %% Exercise Tracker by Juan Luis
 %  Made 2022/10/02
 
+% Cle
 clc
 clear
 close all
