@@ -350,7 +350,7 @@ switch respuesta_usuario
         Im = max(Iinda);
 
 	% Print results
- 	%
+ 	% Imprimir 
         fprintf('Resultados del Alternador: \n')
         fprintf(['  Flujo magnético máximo: %.2f Weber \n'], phim)
         fprintf(['  Voltaje inducido máximo: %.2f Voltios \n'], efemm)
