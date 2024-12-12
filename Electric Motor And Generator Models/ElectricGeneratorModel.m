@@ -348,7 +348,8 @@ switch respuesta_usuario
         phim = max(phia);
         efemm = max(efema);
         Im = max(Iinda);
-        
+
+	% Print results
         fprintf('Resultados del Alternador: \n')
         fprintf(['  Flujo magnético máximo: %.2f Weber \n'], phim)
         fprintf(['  Voltaje inducido máximo: %.2f Voltios \n'], efemm)
