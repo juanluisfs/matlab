@@ -17,4 +17,4 @@ ra = suma/r2
 rb = suma/r3
 rc = suma/r1
 
-heubr
+heu
