@@ -16,3 +16,5 @@ suma = (r1*r2)+(r2*r3)+(r3*r1);
 ra = suma/r2
 rb = suma/r3
 rc = suma/r1
+
+heubr
